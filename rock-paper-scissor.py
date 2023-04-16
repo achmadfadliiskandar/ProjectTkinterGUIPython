@@ -10,7 +10,7 @@ root.geometry("1000x1000")
 root.title("GUNTING BATU KERTAS")
 
 # logo aplikasi ini
-icon_image = Image.open("gbk.png")
+icon_image = Image.open("favicon.ico")
 icon_photo = ImageTk.PhotoImage(icon_image)
 root.iconphoto(False, icon_photo)
 
@@ -50,6 +50,10 @@ def Restart():
     scoreplayer = 0
     angkaplayer.config(text=scoreplayer)
     tombol.config(state=NORMAL)
+
+# tombol eksit
+def Exiit():
+    exit()
 
 
 
@@ -150,7 +154,7 @@ tombolrestart = Button(root,text='Restart',command=Restart,state=DISABLED)
 tombolrestart.place(relx=0.7,rely=0.7,anchor=N)
 
 # tombol keluar exit
-tombolkeluar = Button(root,text='Exit',command=exit)
+tombolkeluar = Button(root,text='Exit',command=Exiit)
 tombolkeluar.place(relx=0.8,rely=0.7,anchor=N)
 
 root.mainloop()
