@@ -13,6 +13,7 @@ root.title("GUNTING BATU KERTAS")
 icon_image = Image.open("favicon.ico")
 icon_photo = ImageTk.PhotoImage(icon_image)
 root.iconphoto(False, icon_photo)
+# untuk yang diatas ini sebenarnya ada cara simplenya yaitu root.iconbitmap(f'favicon.ico')/ root.iconbitmap('favicon.ico')
 
 # make score 
 scoreplayer = 0
