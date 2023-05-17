@@ -11,7 +11,7 @@ root.title('TIC TAC TOE')
 # 159,753,951 konsep datar miring samping kanan kiri
 
 # fungsi untuk button JANGAN DIGANGGU
-# konsep aja ini mah
+# mulai game
 def start_game():
     selected_value = combobox.get()
     if selected_value == "":
@@ -42,7 +42,7 @@ start_button.grid(row=0,column=2)
 
 jumlahklik =  IntVar()
 
-# restart
+# fungsi restart
 def Restart():
     # pass
     tombol1.config(text="",state=DISABLED)
