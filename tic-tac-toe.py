@@ -13,12 +13,13 @@ root.title('TIC TAC TOE')
 # fungsi untuk button JANGAN DIGANGGU
 # mulai game
 def start_game():
-    selected_value = combobox.get()
-    if selected_value == "":
-        messagebox.showerror("Tejadi Kesalahan", "Pilih angka 1-2 terlebih dahulu!")
+    selected_index = combobox.current()
+    if selected_index == -1:
+        messagebox.showerror("Terjadi Kesalahan", "Pilih BULAT-SILANG terlebih dahulu!")
     else:
-        info_label.config(text="Keterangan: 1:Bulat 2:Silang")
-        dd = int(selected_value)
+        selected_value = combobox.current()
+        info_label.config(text="Keterangan: BULAT:O SILANG:X")
+        dd = int(selected_value) + 1
         jumlahklik.set(dd)
         start_button.config(state=DISABLED)
         tombol1.config(state=NORMAL)
@@ -34,7 +35,7 @@ def start_game():
 info_label = Label(root, text="Pilih Angka 1-2")
 info_label.grid(row=0,column=0)
 
-combobox = ttk.Combobox(root, values=[1, 2])
+combobox = ttk.Combobox(root, values=["BULAT", "SILANG"])
 combobox.grid(row=0,column=1)
 
 start_button = Button(root, text="Mulai", command=start_game)
