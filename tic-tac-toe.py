@@ -265,7 +265,7 @@ tombol9.grid(row=3,column=2,padx=20,pady=20)
 # Pesan/Higlight siapa yang menang
 pemenangs = Label(root,text='Hasil')
 pemenangs.grid(row=4,column=1)
-restart_button = Button(root, text="Restart",state=DISABLED,command=Restart)
+restart_button = Button(root, text="Restart",command=Restart)
 restart_button.grid(row=4,column=2)
 
 root.mainloop()
